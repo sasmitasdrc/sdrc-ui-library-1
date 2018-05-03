@@ -1,0 +1,86 @@
+.carousel-item  img{
+    width:100%;
+   
+}
+.body-end{
+    height: 20px;
+    
+}
+.col-sm-3{
+    height: 200px;
+    width: 100px;
+}
+.panel {
+    border: 1px solid #1f4a7c; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 200px;
+}
+.panel:hover {
+    box-shadow: 30px 0px 25px rgba(0,0,0, .2);
+}
+.panel-heading {
+    color: #fff !important;
+    background-color: #1f4a7c !important;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.panel-heading h6{
+    padding-top: 1px;
+    margin-bottom: 0;
+}
+.row.slide {
+    padding-bottom: 15px;
+}
+.text-center {
+    text-align: center!important;
+    margin-top: 15px;
+}
+.text-center h4, h6{
+    font-family: sans-serif;
+    font-weight: 400;
+   
+}
+.notify-contain ul li a{
+    color: black;
+}
+.notify-contain ul li a  :hover{
+    color: red !important;
+}
+@media only screen and (max-width: 1024px) {
+    marquee {
+        height: 150px;
+    }
+    
+}
+@media only screen and(max-width: 991px){
+    .body-end{
+        height: 20px !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .body-end{
+        height: 20px !important;
+        
+    }
+}
+
+@media only screen and(max-width: 608px){
+    .body-end{
+        height: 20px !important;
+    }
+}
+@media only screen and(max-width: 520px){
+    .body-end{
+      margin-bottom: 20px;
+    }
+}
+@media only screen and(max-width: 480px){
+    .body-end{
+        height: 20px !important;
+    }
+}

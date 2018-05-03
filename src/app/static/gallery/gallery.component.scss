@@ -1,0 +1,37 @@
+.col-md-3  img{
+    height: 230px;
+    width: 230px;
+    transition: transform .6s;  
+}
+.col-md-3:hover{
+    box-shadow: 10 5 5 20 gray;
+}
+.glr_heading{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #1f4a7c;
+}
+.body-gallery{
+    height: 80px;
+}
+.col-md-3 img:hover {
+    transform: scale(1.1);
+    box-shadow:0px 5px 5px 5px rgba(0,0,0, .2);
+}
+.col-md-3 h6{
+    text-align: center;
+}
+.row {
+    margin-top: 20px;
+}
+.gallery h6{
+    color: #1f4a7c;
+}
+@media only screen and (max-width: 520px) {
+    .gallery{
+        text-align: center;
+    }
+}

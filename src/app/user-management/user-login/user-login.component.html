@@ -1,0 +1,41 @@
+
+<div class="login-form-container">
+  <header class="col-md-12 login-header" style="text-align:center;"><strong>Login</strong>
+  </header>
+  <div class="container-body">     
+     <form>  
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="usr">Username:</label>
+                <input type="text" name="username" class="form-control" placeholder="" id="usr">            
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" name="password" class="form-control" placeholder="" id="pwd" style="margin-left:3px;">            
+            </div>
+        </div>       
+    </div>
+    <div class="text-center"><a routerLink="/registration">New user?</a></div>
+    <div class="form-group row">
+      <div class="col">
+        <button class="btn btn-default login-submit" type="submit" (click)="login()">Submit</button>
+      </div>
+    </div>
+</form>
+    <!-- <div class='row'>
+      <div class='col'>
+          <a data-toggle="modal" data-target="#basicExample" (click)="side.show()" mdbRippleRadius>Forgot password ?</a>
+      </div>
+    </div> -->
+    <div class="row error-message">
+        <div class="col">
+            <b>Wrong username/password entered</b>
+        </div>        
+    </div>
+  </div>
+</div>

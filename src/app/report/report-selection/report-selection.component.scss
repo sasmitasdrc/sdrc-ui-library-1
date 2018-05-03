@@ -1,0 +1,98 @@
+
+
+// .user-type{
+//     padding-left: 5%;
+// }
+
+.timeperiod-type{
+    margin-left: 25%;
+}
+
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .3em;
+    vertical-align: middle;
+    content: unset;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+}
+
+i.fa.fa-list {
+    font-size: 14px;
+}
+
+input[type=text] {
+    height: 35px;
+}
+
+.padding-left-zero{
+    padding-left: 0;
+}
+
+.padding-right-zero{
+    padding-right: 0;
+}
+
+.dropdown-menu.drp-list {
+    overflow: auto;
+}
+
+// modal css
+
+#errorMessage button, #errorMessage button:hover
+ {
+    color: #fff;
+    background: #3a6b66;
+    border-radius: 0;
+    margin-right: 10px;
+}
+
+div#errorMessage button{
+	border-radius: 0;
+	background-color: #333a3b;
+	color: #FFF;
+    margin: 15px;
+}
+
+ .modal-body {
+    padding: 0px;
+}
+
+div#errorMessage .modal-dialog{
+    margin-top: 15%;
+}
+
+.errorhead {
+	background-color: #f07258;
+	font-weight: bold;
+	margin-bottom: 15px;
+	padding: 12px;
+	font-size: 19px;
+}
+
+.modal-dialog .modal-content
+{
+border: none;
+border-radius: 0;
+}
+
+.confrirmation-modal
+{
+z-index: 12000;
+background: rgba(0, 0, 0, 0.39);
+}
+
+// end modal css
+
+
+.mandatory_star
+ {
+ 	color: #cc0000;
+ 	font-size: 12px;
+    font-weight: bold;
+ }
+

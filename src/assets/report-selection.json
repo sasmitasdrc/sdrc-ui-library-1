@@ -1,0 +1,410 @@
+[
+    {
+"key": null,
+"label": "Institution Type",
+"aggRole": null,
+"type": null,
+"columnName": "user-type",
+"placeholderName": "Select user type",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 1,
+    "value": "Juvenile Justice Board (JJB)",
+    "order": 1,
+    "isSelected": null
+    },
+    {
+    "key": 2,
+    "value": "District Child Protection Unit (DCPU)",
+    "order": 2,
+    "isSelected": null
+    },
+    {
+    "key": 3,
+    "value": "Special Juvenile Police Unit (SJPU)",
+    "order": 3,
+    "isSelected": null
+    },
+    {
+    "key": 4,
+    "value": "CCI Children Home",
+    "order": 4,
+    "isSelected": null
+    },
+    {
+    "key": 5,
+    "value": "CCI Open Shelter",
+    "order": 5,
+    "isSelected": null
+    },
+    {
+    "key": 6,
+    "value": "CCI Place Of Safety",
+    "order": 6,
+    "isSelected": null
+    },
+    {
+    "key": 7,
+    "value": "Child Welfare Committee(CWC)",
+    "order": 7,
+    "isSelected": null
+    },
+    {
+    "key": 8,
+    "value": "CCI Observation Home",
+    "order": 8,
+    "isSelected": null
+    },
+    {
+    "key": 9,
+    "value": "CCI Special Home",
+    "order": 9,
+    "isSelected": null
+    },
+    {
+    "key": 10,
+    "value": "Specialized Adoption Agency(SAA)",
+    "order": 10,
+    "isSelected": null
+    },
+    {
+    "key": 11,
+    "value": "Specialized Adoption Agency(SAA)",
+    "order": 11,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"label": "Report Type",
+"aggRole": null,
+"type": null,
+"columnName": "report-type",
+"placeholderName": "Select report type",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 12,
+    "value": "Case status",
+    "order": 12,
+    "isSelected": null
+    },
+    {
+    "key": 13,
+    "value": "Pending Cases",
+    "order": 13,
+    "isSelected": null
+    },
+    {
+    "key": 14,
+    "value": "Compliance",
+    "order": 14,
+    "isSelected": null
+    },
+    {
+    "key": 15,
+    "value": "Structures",
+    "order": 15,
+    "isSelected": null
+    },
+    {
+    "key": 16,
+    "value": "Social Schemes",
+    "order": 16,
+    "isSelected": null
+    },
+    {
+    "key": 17,
+    "value": "Health status",
+    "order": 17,
+    "isSelected": null
+    },
+    {
+    "key": 18,
+    "value": "Budget section",
+    "order": 18,
+    "isSelected": null
+    },
+    {
+    "key": 19,
+    "value": "Case Status by duration",
+    "order": 19,
+    "isSelected": null
+    },
+    {
+    "key": 20,
+    "value": "Education status of children",
+    "order": 20,
+    "isSelected": null
+    },
+    {
+    "key": 21,
+    "value": "Health status of children",
+    "order": 21,
+    "isSelected": null
+    },
+    {
+    "key": 22,
+    "value": "Cases released",
+    "order": 22,
+    "isSelected": null
+    },
+    {
+    "key": 23,
+    "value": "Educational status",
+    "order": 23,
+    "isSelected": null
+    },
+    {
+    "key": 24,
+    "value": "Adoption status",
+    "order": 24,
+    "isSelected": null
+    },
+    {
+    "key": 25,
+    "value": "Pendency",
+    "order": 25,
+    "isSelected": null
+    },
+    {
+    "key": 26,
+    "value": "PAP Status",
+    "order": 26,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"label": "Report Name",
+"aggRole": null,
+"type": null,
+"columnName": "report-name",
+"placeholderName": "Select report name",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 27,
+    "value": "Status of Panchayat Level Child Protection Committee",
+    "order": 27,
+    "isSelected": null
+    },
+    {
+    "key": 28,
+    "value": "Status of Word Level Child Protection Committee",
+    "order": 28,
+    "isSelected": null
+    },
+    {
+    "key": 29,
+    "value": "Status of Block Level Child Protection Committee",
+    "order": 29,
+    "isSelected": null
+    },
+    {
+    "key": 30,
+    "value": "Children with JJB on the first day of the reporting month",
+    "order": 30,
+    "isSelected": null
+    },
+    {
+    "key": 31,
+    "value": "New children with JJB during the month",
+    "order": 31,
+    "isSelected": null
+    },
+    {
+    "key": 32,
+    "value": "Children with JJB in the reporting month",
+    "order": 32,
+    "isSelected": null
+    },
+    {
+    "key": 33,
+    "value": "Compliance relating to SIR",
+    "order": 33,
+    "isSelected": null
+    },
+    {
+    "key": 34,
+    "value": "Compliance relating to SBR and Final forms",
+    "order": 34,
+    "isSelected": null
+    },
+    {
+    "key": 35,
+    "value": "Bail ordered by JJB for old cases",
+    "order": 35,
+    "isSelected": null
+    },
+    {
+    "key": 36,
+    "value": "Children on the first day of the month - by duration",
+    "order": 36,
+    "isSelected": null
+    },
+    {
+    "key": 37,
+    "value": "Availing services only during the day",
+    "order": 37,
+    "isSelected": null
+    },
+    {
+    "key": 38,
+    "value": "Availing services during both day and night",
+    "order": 38,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"label": "Periodicity Type",
+"aggRole": null,
+"type": null,
+"columnName": "periodicity-type",
+"placeholderName": "Select periodicity type",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 39,
+    "value": "Monthly",
+    "order": 39,
+    "isSelected": null
+    },
+    {
+    "key": 40,
+    "value": "Quarterly",
+    "order": 40,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"label": "Monthly",
+"aggRole": null,
+"type": null,
+"columnName": "month",
+"placeholderName": "Select month",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 41,
+    "value": "Dec 2017",
+    "order": 41,
+    "isSelected": null
+    },
+    {
+    "key": 42,
+    "value": "Jan 2018",
+    "order": 42,
+    "isSelected": null
+    },
+    {
+    "key": 43,
+    "value": "Feb 2018",
+    "order": 43,
+    "isSelected": null
+    },
+    {
+    "key": 44,
+    "value": "Mar 2018",
+    "order": 44,
+    "isSelected": null
+    },
+    {
+    "key": 45,
+    "value": "Apr 2018",
+    "order": 45,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"label": "Quarterly",
+"aggRole": null,
+"type": null,
+"columnName": "quarterly",
+"placeholderName": "Select quarter",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 46,
+    "value": "Oct 2017 - Dec 2017",
+    "order": 46,
+    "isSelected": null
+    },
+    {
+    "key": 47,
+    "value": "Jan 2018 - Mar 2018",
+    "order": 47,
+    "isSelected": null
+    }
+    ]
+}
+]

@@ -1,0 +1,33 @@
+footer#foot {
+    background-color: #1f4a7c;
+    padding: 10px 0 0 0;
+    position: absolute;
+    width: 100%;
+    font-size: 13px;
+    /* margin-top: 50px; */
+    // bottom: 0;
+}
+footer#foot * {
+    color: #FFF;
+}
+a.text_deco_none span {
+    color: orange !important;
+}
+footer p{    
+    margin-top: 7px;
+}
+.copy-right{
+    float: left;
+}
+.main-content{
+    min-height: 450px !important;
+}
+.footer-all-links{
+    display: inline-block;
+}
+.footer-links{
+    display: inline-flex;
+    list-style-type: none;
+    float: right;
+    margin-bottom: 0;
+}

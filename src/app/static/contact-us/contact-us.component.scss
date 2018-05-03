@@ -1,0 +1,102 @@
+.contact-body{
+    background-color:#eaecef;
+    margin-top: 40px;
+   
+}
+.contact-end{
+    height: 40px;
+}
+.area{
+    height: 500px;
+    
+    box-shadow: 1px 2px 20px 5px grey;
+}
+.areadetails p{
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+
+}
+.areadetails span{
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    margin-left: 15px;
+}
+.feedback{
+    height: 500px;
+    background-color: white;
+}
+.contact-details{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.location{
+    padding-right: 0;
+}
+.contact-heading h5 {
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #1f4a7c;
+    padding-top: 17px;
+}
+input#usr {
+    border: 1px solid #1f4a7c;
+    height: 10px;
+}
+input#email{
+    border: 1px solid #1f4a7c;
+    height: 10px;
+}
+textarea#message {
+    border: 1px solid #1f4a7c;
+    height: 150px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #1f4a7c;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding-left: 10px;
+}
+form {
+    margin-top: 50px;
+}
+.btn-primary {
+    background-color: #1f4a7c;
+    height: 30px;
+}
+.feed-btn{
+    text-align: center;
+}
+button.btn.btn-primary {
+    padding: 0;
+    width: 100px;
+}
+@media screen and (max-width: 480px) {
+    .area, iframe {
+        width: 96%;
+    }
+}
+@media screen and (max-width: 768px) {
+    form {
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width: 991px) {
+    form {
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width: 608px) {
+    form {
+        margin-top: 40px;
+    }
+    .area, iframe {
+        width: 97%;
+    }
+}
+

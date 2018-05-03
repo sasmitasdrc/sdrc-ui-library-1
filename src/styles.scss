@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary-color: #1f4a7c;
+// customizing mdb bootstrap
+
+@mixin dropdownList(){
+    right: 0;
+    width: 100%;
+    left: auto;
+}
+@mixin headerFooterZindex(){
+    z-index: 1000;
+}
+@function get-vw($target) { 
+    $vw-context: (1000*.01) * 1px;
+    @return  1vw;
+  }
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.md-textarea {
+    border: 1px solid #CCCC;
+    border-bottom: 1px solid #CCCC;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.indicator-container{
+    margin-bottom: 20px;
+}
+.dropdown-menu.drp-list{
+    @include dropdownList();
+    
+}
+.logo-block, footer#foot{
+    @include headerFooterZindex()
+}
+body{
+    min-height: 1vh;
+}
+.input-holder{
+    display: inline-block;
+}
+.no-spinners [type='number'] {
+    -moz-appearance:textfield;
+}  
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+    margin: 0;
+}  
+.page-heading{
+    font-size: 26px;
+    text-align: center;
+    border-bottom: 1px solid #31859c;
+    color: #31859c;
+    margin-bottom: 30px;
+    padding-bottom: 7px;
+}  
+.btn-default, .btn-default:hover,.btn-default:focus, .btn-default:active, 
+.btn-default.dropdown-toggle, .btn-default.dropdown-toggle:hover, 
+.btn-default.dropdown-toggle:focus, .btn-default.dropdown-toggle:active, .btn-submit {
+    background-color: $primary-color !important; 
+}
+
+header#header.header-sec-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+input[type=file] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+ }
+ .list-heading{
+   border-bottom: 1px solid $primary-color; 
+   color: $primary-color; 
+   font-weight: bold;
+   font-size: 18px;  
+   margin-bottom: 20px;
+ }
+ 
+ .left-list{
+   height: 105%;
+   width: 30%;
+   background-color: #80a7e0;
+   padding-top: 80px;
+   position: absolute;
+   /* top: 0; */
+ }
+ .left-side-scroll{
+   top: -30px;
+   padding-top: 150px;
+   position: fixed !important;
+ }
+ .content-sec{
+   padding-top: 50px;
+   margin-left: 25%;
+ }
+ .sub-headings{
+   margin-top: 50px;
+   margin-bottom: 10px !important;
+   font-weight: 500;
+   color: $primary-color;
+ } 
+ .drp-list{
+   right: 0;
+ }
+ 

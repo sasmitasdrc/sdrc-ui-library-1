@@ -1,0 +1,96 @@
+[
+{
+"key": null,
+"label": "Select Year",
+"aggRole": null,
+"type": null,
+"columnName": "Year",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"options": [
+    {
+"key": 1,
+"value": "2014-2015",
+"order": 1,
+"isSelected": null
+},
+{
+"key": 2,
+"value": "2015-2016",
+"order": 2,
+"isSelected": null
+},
+{
+"key": 3,
+"value": "2016-2017",
+"order": 3,
+"isSelected": null
+},
+{
+"key": 4,
+"value": "2017-2018",
+"order": 4,
+"isSelected": null
+},
+{
+"key": 5,
+"value": "2018-2019",
+"order": 5,
+"isSelected": null
+}
+],
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null
+},
+{
+"key": null,
+"label": "Select Quarter",
+"aggRole": null,
+"type": null,
+"columnName": "Quarter",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"options": [
+    {
+"key": 1,
+"value": "Apr-June",
+"order": 1,
+"isSelected": null
+},
+{
+"key": 2,
+"value": "July-Sep",
+"order": 2,
+"isSelected": null
+},
+{
+"key": 3,
+"value": "Oct-Dec",
+"order": 3,
+"isSelected": null
+},
+{
+"key": 4,
+"value": "Jan-Mar",
+"order": 4,
+"isSelected": null
+}
+],
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null
+}
+]

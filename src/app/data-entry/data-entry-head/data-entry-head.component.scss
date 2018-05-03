@@ -1,0 +1,48 @@
+.data-heads{
+    list-style: none;
+}
+.data-head-list{
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    counter-increment: step-counter;
+    margin-left: -20px;
+    position: relative;
+    height: 100px;
+}
+.data-head-list .list-span > a{    
+    color:#fff;  
+    cursor: pointer;    
+}  
+
+.data-head-list > a.active{    
+    background-color: #fff;
+    color: #000;
+}
+
+.data-head-list::before {
+    content: counter(step-counter);
+    font-size: 14px;
+    background-color: #1f4a7c;
+    color: white;
+    font-weight: bold;
+    padding: 11px 9px 11px 4px;
+    display: inline-block;
+    border-radius: 0 40px 40px 0;
+    float: left;
+    height: 40px;
+    margin-top: 31px;
+}
+.list-span{
+    top: 50%;
+    display: block;
+    margin-left: 45px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+li.data-head-list.active {
+    background-color: #1f4a7c;
+}
+li.data-head-list.active::before{
+    background-color: #80a7e0;
+}

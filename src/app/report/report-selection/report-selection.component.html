@@ -1,0 +1,51 @@
+
+
+<section class="container selection-section">
+     <form  style="margin-top: 70px;">
+
+      <!-- selection lists for reports -->
+       <div class="col-md-12">
+          <div class="row">
+            <div *ngFor="let field of selectionInputs; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}"
+            class="col-md-6 user-type indicator-container padding-right-zero">
+            <label [attr.for]="field.columnName" class="col-md-4 text-right">{{field.label}}&nbsp;<span class="mandatory_star">&#42; &nbsp;:</span></label> 
+            <div [ngSwitch]="field.controlType" class="col-md-6 input-holder padding-left-zero">
+               <!-- Input dropdown-->
+               <div class="btn-group" *ngSwitchCase="'dropdown'">
+                 <input type="text" [id]="field.columnName" style="padding: 0 10px;" readonly
+                 [placeholder]="field.placeholderName" [(ngModel)]="field.value" name="{{field.columnName}}" >
+                 <button type="button" style="padding: 0"  data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"
+                 class="btn btn-default dropdown-toggle px-3 waves-light" 
+                  mdbRippleRadius><i class="fa fa-list"></i></button>
+                 <div class="dropdown-menu drp-list">
+                     <a class="dropdown-item" style="font-size: 13px;" title="{{opt.value}}"
+                      *ngFor="let opt of field.options" (click)="selectDropdown(opt, selectionInputs, i)">{{opt.value}}</a>
+                 </div>
+               </div>    
+             </div> 
+            </div>
+          </div>
+          </div>
+
+    
+       <div class="form-group row">
+         <div class="col-md-12 text-center">
+           <button class="btn btn-submit" type="submit" style="margin-top: 25px;background: #1f4a7c;" (click)="submitForm()">Submit</button>
+         </div>
+       </div>
+     </form>
+</section>
+
+<!-- error modal -->
+<div id="errorMessage" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <div class="errorhead"><img alt="" src="assets/images/icons/Messages_warning_caution_icon.svg" style="width: 25px;margin-top: -5px;">&nbsp; ERROR</div>
+        <div class="errorbody">{{validationMsg}}</div>
+        <button type="button" class="btn errorOk" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

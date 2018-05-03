@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div class="row question-row">
+   <div class="col-md-3 left-list">
+      <sdrc-data-entry-head></sdrc-data-entry-head>
+   </div>
+  <div class="col-md-9 content-sec">
+      <div class="col-md-10 offset-md-1">
+       <h2 class="list-heading">{{allDataService.selectedSection}}</h2>
+       <form *ngIf="allDataService.allformData && allDataService.selectedSection">
+          <div>
+            <div *ngFor="let subsectionKeys of allDataService.allformData[allDataService.selectedSection] | objIterate; let j=index">
+             <div class="row">
+                 <div class="col-md-12 sub-headings">{{subsectionKeys}}</div>
+             </div>                
+          <div *ngFor="let field of allDataService.allformData[allDataService.selectedSection][subsectionKeys]; let i = index;" class="row">            
+           <label [attr.for]="field.key" class="col-md-5">{{field.label}}</label>
+            <div [ngSwitch]="field.controlType" class="col-md-6 input-holder">
+              <!-- input text box -->
+              <input *ngSwitchCase="'textbox'"
+               multiple #fileInput
+                     accept="application/pdf,application/vnd.ms-excel,application/msword"
+                      [id]="field.key" [type]="field.type" class="form-control" [ngClass]="[field.type == 'number'? 'no-spinners': '']">
+           
+              <!-- Input dropdown-->
+              <div class="btn-group" style="padding-left: 3px;
+              width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
+                <input type="text" class="dropdown-input" [id]="field.key" style="padding: 10px;" readonly
+                [placeholder]="''" name="{{field.key}}" [(ngModel)] = "field.value">
+                <button type="button" style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                 class="btn btn-default dropdown-toggle px-3 waves-light select-dropdown" 
+                 mdbRippleRadius></button>
+                <div class="dropdown-menu drp-list">
+                    <a class="dropdown-item" style="font-size: 13px;"
+                     *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropdown(opt, subsectionKeys)">{{opt.value}}</a>
+                </div>
+              </div>
+              <!-- Input Checkbox -->
+              <div class="btn-group check-btn-group" style="padding-left: 3px;
+              width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'checkbox'">
+                <input type="text" class="dropdown-input" [id]="field.key" style="padding: 10px;" readonly
+                [placeholder]="''"  name="{{field.key}}" >
+                
+                <button type="button" style="padding: 0"
+                class="btn btn-default dropdown-toggle-split px-3 waves-light select-dropdown select-checkbox" 
+                 mdbRippleRadius><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                <div class=" drp-list checkbox-list">
+                    <!-- <a class="dropdown-item" style="font-size: 13px;"
+                     *ngFor="let opt of field.options" [value]="opt.key" (click)="selectCheckBox(opt, k, subsectionKeys.key , i)"><input type="checkbox">{{opt.value}}</a> -->
+                     <div class="checkbox-group dropdown-item" *ngFor="let opt of field.options; let optionIndex=index"  style="font-size: 13px;">
+                       <!-- <input mdbDeepDirective  type="checkbox" class="filled-in" id="{{field.key+ '_' + opt.value}}"> -->
+                       <label for="{{field.key+ '_' + opt.value}}" [ngClass]="[opt.isSelected? 'checked': '']">{{opt.value}}</label>
+                     </div>
+                 </div>
+              </div>
+            </div>       
+          </div>
+          </div>
+          
+         </div>
+          <div class="form-group row">
+            <div class="col-md-10 offset-md-1 text-right">  
+              <button class="btn btn-default proceed-btn" type="submit">Next</button>                          
+              <button class="btn btn-default back-btn" type="submit">Save</button>
+            </div>
+           </div>
+        </form>
+  </div>  
+  </div>
+</div>
+</div>
+

@@ -1,0 +1,139 @@
+
+
+<div class="container-fluid dash-container-fluid">
+    <div class="row dash-heading">
+        <div class="col-md-2">
+        <h4 class="dash-info">Dashboard</h4>
+        </div>
+        <div style="position: fixed;right: -160px;z-index: 1000;" class="download-container remove">
+                <button type="button" id="pdfDownloadBtn" class="btn pdfDownloadBtn" title="Download PDF" ng-click="sdrc_export()">
+                    <i class="fa fa-lg fa-file-pdf-o"></i> &nbsp; Download PDF
+                </button>
+            </div>
+            <div class="col-md-3 c col-xs-5 facilitySection">
+                    <h5 class="textsiz ng-binding">
+                        <div class="square-color" style="background-color: #df6864;"></div>
+                        Facilities Planned: 179
+                    </h5>
+                    <h5 class="textsiz ng-binding">
+                        <div class="square-color" style="background-color: #228a76"></div>
+                        Facilities Covered: 173
+                    </h5>
+                </div>
+
+                <div class="col-md-4 col-xs-7 text-right facility-progress-bar">
+								<div id="bar-2" class="bar-main-container emerald">
+									<div class="wrap">
+										<div class="bar-percentage" data-percentage="75">97%</div>
+										<div class="bar-container">
+											<div class="bar" style="width: 97%;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+    </div>
+<div class="row mar-bot-10">
+    <div class="col-md-12">
+            <div class="download-container-excel remove">
+                    <button type="button" id="excelDownloadBtn" class="btn excelDownloadBtn" title="Download Excel" ng-click="sdrc_export()">
+                        <i class="fa fa-lg fa-file-excel-o"></i> &nbsp; Download Excel
+                    </button>
+                </div>
+                <!-- <div class="row"> -->
+                        <div class="col-md-12 selection-bar">
+                                <div class="row">
+                                <div class="col-md-3 col-md-offset-3">
+                                    <div class="select-container text-center">
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Time Period *" class="form-control not-visible-input input-box" name="indicator" readonly="">
+                                            <div class="input-group-btn" style="position: relative;">
+                                                <button data-toggle="dropdown" class="btn btn-color dropdown-toggle btn-size" type="button">
+                                                    <i class="fa fa-calendar"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <!-- ngRepeat: timeperiod in allTimePeriods -->
+                                                    <li ng-repeat="timeperiod in allTimePeriods"><a href="">Time</a></li>
+                                                     <!-- end ngRepeat: timeperiod in allTimePeriods -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="select-container text-center">
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Indicator *" id="indicator" class="form-control not-visible-input input-box" name="indicator" readonly="">
+                                            <div class="input-group-btn" style="position: relative;">
+                                                <button data-toggle="dropdown" class="btn btn-color dropdown-toggle btn-size" type="button">
+                                                    <i class="fa fa-list"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <!-- ngRepeat: sector in sectors -->
+                                                    <li ng-repeat="sector in sectors"><a href="">Overall Score</a></li>
+                                                    <!-- end ngRepeat: sector in sectors -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="select-container dist-list text-center">
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Districts *" id="Dist" class="form-control not-visible-input input-box" name="Dist" readonly="">
+                                            <div class="input-group-btn" style="position: relative;">
+                                             <button data-toggle="dropdown" ng-if="roleId != 3" class="btn btn-color dropdown-toggle btn-size" type="button">
+                                                    <i class="fa fa-list"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <!-- ngRepeat: district in allDistricts -->
+                                                    <li ng-repeat="district in allDistricts"  class="allDistDropdown"><a href="" >CHHATTISGARH</a></li>
+                                                    <!-- end ngRepeat: district in allDistricts -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            </div>
+                <!-- </div> -->
+        </div>
+</div>
+
+
+<div style="margin-bottom: 40px;">
+    <div class="col-md-12 google-map">
+        <sdrc-google-map></sdrc-google-map>
+    </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col-md-6">
+            <h4 class="dash-info">Spider Chart</h4>
+        <sdrc-spider-chart *ngIf="spiderData" [data]="spiderData.dataCollection"></sdrc-spider-chart>
+    </div>
+
+    <div class="col-md-6">
+            <h4 class="dash-info">Bar Chart</h4>
+        <sdrc-bar-chart *ngIf="barChartData" [data]="spiderData.dataCollection"></sdrc-bar-chart>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+            <h4 class="dash-info">Line Chart</h4>
+        <sdrc-line-chart *ngIf="lineChartData" [data]="lineChartData"></sdrc-line-chart>
+    </div>
+    <div class="col-md-6">
+            <h4 class="dash-info">Dough Nut Chart</h4>
+    <sdrc-doughnut-chart *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-chart>
+    </div>
+  
+    </div>   
+    
+    <div class="row">
+        
+    </div>
+
+</div>
+

@@ -1,0 +1,62 @@
+<div class="container">
+ <div class="row question-row">
+  <div class="col-md-12">
+   <div class="col-md-9 offset-md-1" style="margin-top: 50px;">
+    <h2 class="page-heading">User Management</h2>
+    <form>     
+      <div *ngFor="let field of userFields; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}" class="row">
+        <label [attr.for]="field.key" class="col-md-4 text-right">{{field.label}}:</label>
+        <div [ngSwitch]="field.controlType" class="col-md-6 input-holder">
+          <!-- input text box -->
+          <input *ngSwitchCase="'textbox'" name="{{field.columnName}}"
+                  [id]="field.key" [type]="field.type" [(ngModel)]="field.value" class="form-control" [ngClass]="[field.type == 'number'? 'no-spinners': '']">
+           
+          <!-- Input dropdown-->
+          <div class="btn-group" style="padding-left: 3px;
+          width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
+            <input type="text" class="dropdown-input" [id]="field.key" readonly
+            [placeholder]="field.placeholder" [(ngModel)]="field.value" name="{{field.columnName}}" >
+            <button type="button" dropdownToggle style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            class="btn btn-default dropdown-toggle px-3 waves-light" 
+             mdbRippleRadius></button>
+            <div class="dropdown-menu drp-list">
+                <a class="dropdown-item" style="font-size: 13px;"
+                 *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropDown(opt, userFields, i)">{{opt.value}}</a>
+            </div>
+          </div>
+        </div> 
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-md-6 offset-md-6">
+          <button class="btn btn-default user-submit" type="submit" (click)="submitForm()">Submit</button>
+        </div>
+      </div>
+      
+    </form>
+
+    <div class="user-details-tbl">        
+        <h2 class="page-heading"></h2>  
+        <table id="user-history" class="table table-striped"
+               cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                  <th *ngFor="let column of columns" class="t-heading">{{column}}</th>                
+                </tr>
+              </thead>
+  
+              <tbody>
+                  <tr *ngFor="let rowData of areaDetails" >
+                  <td *ngFor="let column of columns" class="pdsa-table">						
+                        {{!rowData[column] ? '-': rowData[column]}} </td>                                   
+                  </tr>
+             </tbody>
+        </table>
+      </div>
+
+    </div>
+   </div>
+  </div> 
+</div>
+  
+  

@@ -1,0 +1,48 @@
+<div class="container-fluid logo-block">
+  <div class="logo-secion" id="logo-section">
+     <a href="#" style="float: left;"><img src="./assets/images/logo.png" alt="BBBP" width="85px"></a>
+     <div class="logo-text"><h2>UI Component Library</h2><p>project by ui team</p></div>
+     <!-- <a href="#" style="float:right;"><img src="./assets/images/logo-right.png" alt="MWCD" width="85px" class="logo-img"></a> -->
+  </div>
+</div>
+<header id="header">
+<div class="container-fluid">
+<nav id='nav_bar' style="font-size:14px;">
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item" [ngClass]="{'active': router.url=='/'}">
+          <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      
+      <li class="nav-item" [ngClass]="{'active': router.url=='/about-us'}">
+          <a class="nav-link" mdbRippleRadius routerLink="about-us">About Us</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': router.url=='/dashboard'}">
+        <a class="nav-link" mdbRippleRadius routerLink="dashboard">Dashboard</a>
+    </li>
+      <li class="nav-item" [ngClass]="{'active': router.url=='/data-entry'}">
+        <a class="nav-link" mdbRippleRadius routerLink="data-entry">Data Entry</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': router.url=='/report'}">
+        <a class="nav-link" mdbRippleRadius routerLink="report">Report</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': router.url=='/gallery'}">
+        <a class="nav-link" mdbRippleRadius routerLink="gallery">Gallery</a>
+        </li>
+       <li class="nav-item" [ngClass]="{'active': router.url=='/resources'}">
+            <a class="nav-link" mdbRippleRadius routerLink="resources">Resources</a>
+         </li>
+         <li class="nav-item" [ngClass]="{'active': router.url=='/contact-us'}">
+            <a class="nav-link" mdbRippleRadius routerLink="contact-us">Contact Us</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': router.url=='/user-managment'}">
+            <a class="nav-link" mdbRippleRadius routerLink="user-managment">User Management</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': router.url=='/login'}">
+            <a class="nav-link" mdbRippleRadius routerLink="login">Login</a>
+          </li>   
+  </ul>
+  <!-- Links -->
+</nav>
+</div>
+</header>

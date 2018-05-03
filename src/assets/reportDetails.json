@@ -1,0 +1,219 @@
+{
+    "userTypeModel": [
+        {
+            "key": null,
+            "label": "User Type :",
+            "aggRole": null,
+            "type": null,
+            "columnName": "Year",
+            "placeholderName": "Select user type",
+            "dependecy": null,
+            "dependentColumn": null,
+            "dependentCondition": null,
+            "frequency": null,
+            "roleId": null,
+            "typeId": null,
+            "controlType": "dropdown",
+            "value": null,
+            "fileValue": null,
+            "isOthersSelected": null,
+            "othersValue": null,
+            "options": [
+                {
+                    "typeDetailId": 17,
+                    "typeDetailName": "Six monthly Admin Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 18,
+                    "typeDetailName": "Six monthly Capacity Building Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 20,
+                    "typeDetailName": "Monthly Capacity Building Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 19,
+                    "typeDetailName": "Monthly Admin Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                }
+            ]
+        }
+    ],
+    "reportTypeModel": [
+        {
+            "key": null,
+            "label": "Report Type :",
+            "aggRole": null,
+            "type": null,
+            "columnName": "Year",
+            "dependecy": null,
+            "dependentColumn": null,
+            "dependentCondition": null,
+            "frequency": null,
+            "roleId": null,
+            "typeId": null,
+            "controlType": "dropdown",
+            "value": null,
+            "fileValue": null,
+            "isOthersSelected": null,
+            "othersValue": null,
+            "options": [
+                {
+                    "typeDetailId": 17,
+                    "typeDetailName": "Six monthly Admin Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 18,
+                    "typeDetailName": "Six monthly Capacity Building Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 20,
+                    "typeDetailName": "Monthly Capacity Building Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 19,
+                    "typeDetailName": "Monthly Admin Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                }
+            ]
+        }
+    ],
+    "reportNameModel": [
+        {
+            "key": null,
+            "label": "Report Name :",
+            "aggRole": null,
+            "type": null,
+            "columnName": "Year",
+            "dependecy": null,
+            "dependentColumn": null,
+            "dependentCondition": null,
+            "frequency": null,
+            "roleId": null,
+            "typeId": null,
+            "controlType": "dropdown",
+            "value": null,
+            "fileValue": null,
+            "isOthersSelected": null,
+            "othersValue": null,
+            "options": [
+                {
+                    "typeDetailId": 17,
+                    "typeDetailName": "Six monthly Admin Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 18,
+                    "typeDetailName": "Six monthly Capacity Building Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 20,
+                    "typeDetailName": "Monthly Capacity Building Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 19,
+                    "typeDetailName": "Monthly Admin Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                }
+            ]
+        }
+    ],
+    "periodicityDetailsModel": [
+        {
+            "key": null,
+            "label": "Periodicity :",
+            "aggRole": null,
+            "type": null,
+            "columnName": "Year",
+            "dependecy": null,
+            "dependentColumn": null,
+            "dependentCondition": null,
+            "frequency": null,
+            "roleId": null,
+            "typeId": null,
+            "controlType": "dropdown",
+            "value": null,
+            "fileValue": null,
+            "isOthersSelected": null,
+            "othersValue": null,
+            "options": [
+                {
+                    "typeDetailId": 17,
+                    "typeDetailName": "Six monthly Admin Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 18,
+                    "typeDetailName": "Six monthly Capacity Building Utilization Certificate",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 20,
+                    "typeDetailName": "Monthly Capacity Building Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                },
+                {
+                    "typeDetailId": 19,
+                    "typeDetailName": "Monthly Admin Bills and Vouchers",
+                    "createdBy": null,
+                    "createdDate": null,
+                    "typeId": 9,
+                    "monthlyAvailability": false
+                }
+            ]
+        }
+    ]
+}

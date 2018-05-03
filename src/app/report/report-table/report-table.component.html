@@ -1,0 +1,26 @@
+
+<!-- swarna -->
+
+<div class="container-fluid text-center section-separator margin-top-table">
+    <img alt="" src="/assets/images/svgs/horizontal_separator_cpmis_svg_1.svg">
+  </div>
+<div class="container">
+  <div class="col-md-12 form-group margin-top-table">
+    <div class="row">
+      <table id="user-history" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+              <th *ngFor="let column of reportsService.columns" class="t-heading">{{column}}</th> 
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let rowData of reportsService.reportDetails" >
+                <td *ngFor="let column of reportsService.columns" >						
+                      {{!rowData[column] ? '-': rowData[column]}} </td>                                   
+                </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

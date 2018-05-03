@@ -1,0 +1,7 @@
+<div>
+  <ul class="data-heads">
+    <li class="data-head-list" *ngFor="let section of allDataService.allformData | objIterate">
+        <span class="list-span"><a  (click)="selectSetion(section);">{{section}}</a></span>      
+    </li>
+  </ul>
+</div>
