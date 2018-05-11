@@ -11,10 +11,12 @@ export class AppComponent implements AfterViewChecked {
   ngAfterViewChecked(){
     $(window).scroll(function() {
       if($(window).scrollTop() > 170){
-        $("#header").addClass("header-sec-fixed")
+        $("#header").addClass("header-sec-fixed");
+        $(".left-list").addClass('left-side-scroll');
       }
       else{
-        $("#header").removeClass("header-sec-fixed")
+        $("#header").removeClass("header-sec-fixed");
+        $(".left-list").removeClass('left-side-scroll');
       }
     })
   }

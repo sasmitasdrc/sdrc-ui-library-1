@@ -10,11 +10,11 @@ import { GoogleMapComponent } from './charts/google-map/google-map.component';
 import { DashboardService } from './services/dashboard.service';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 import { SpiderChartComponent } from './charts/spider-chart/spider-chart.component';
+import { ThematicViewComponent } from './charts/thematic-view/thematic-view.component';
+import { DoughnutChartComponent } from './charts/doughnut-chart/doughnut-chart.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { DoughnutChartComponent } from './charts/doughnut-chart/doughnut-chart.component';
 
 @NgModule({
   imports: [
@@ -24,7 +24,7 @@ import { DoughnutChartComponent } from './charts/doughnut-chart/doughnut-chart.c
     FormsModule,
     AgmCoreModule
   ],
-  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent],
+  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, DoughnutChartComponent, ThematicViewComponent, GoogleMapComponent],
   exports: [ LineChartComponent],
   providers: [ DashboardService],
   schemas: [NO_ERRORS_SCHEMA]

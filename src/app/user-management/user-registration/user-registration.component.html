@@ -1,11 +1,16 @@
 <div class="container">
-  <div class="row question-row">
+  <div class="row">
+      <div class="col-md-12">
+          <h4 class="page-heading">User Registration</h4>
+      </div>
+  </div>
+  <div class="row question-row">      
   <div class="col-md-12">
-  <div class="col-md-9 offset-md-1" style="margin-top: 50px;">
-  <h2 class="page-heading">User registration</h2>
+  <div class="col-md-9 offset-md-1">
+  <!-- <h2 class="page-heading">User registration</h2> -->
   <form>     
     <div *ngFor="let field of userRegistrationFields; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}" class="row">
-      <label [attr.for]="field.key" class="col-md-4 text-right">{{field.label}}:</label>
+      <label [attr.for]="field.key" class="col-md-4 text-right">{{field.label}}</label>
       <div [ngSwitch]="field.controlType" class="col-md-6 input-holder">
         <!-- input text box -->
         <input *ngSwitchCase="'textbox'" name="{{field.columnName}}"
@@ -14,7 +19,7 @@
         <!-- Input dropdown-->
         <div class="btn-group" style="padding-left: 3px;
         width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
-        <input type="text" class="dropdown-input" [id]="field.key" readonly
+        <input type="text" class="dropdown-input" [id]="field.key" style="padding: 10px" readonly
           [placeholder]="''" [(ngModel)]="field.value" name="{{field.columnName}}" >
           <button type="button" style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
           class="btn btn-default dropdown-toggle px-3 waves-light select-dropdown" 

@@ -37,9 +37,7 @@ export class UserProfileEditComponent implements OnInit {
     console.log("submitted");
   }
   selectDropDown(selectedOption, model, index){
-    console.log("selected");
-    this.userForms[index].value = selectedOption.value;
-    this.userForms[index].key = selectedOption.key;
+    this.userFields[index].value = selectedOption.value;
+    this.userFields[index].key = selectedOption.key;
   }
-
 }

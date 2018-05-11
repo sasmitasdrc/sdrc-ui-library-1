@@ -1,0 +1,11 @@
+{
+    "dataCollection":[
+        {
+            "areaId":"IND018006",
+            "areaNid":12,
+            "areaName":"Nagaon",
+            "value": 10.0,
+            "cssClass":"firstslices"
+        }
+    ]
+}

@@ -1,10 +1,11 @@
 <div class="container-fluid">
-  <div class="row question-row">
-   <div class="col-md-3 left-list">
+  <div class="row question-row">      
+      <div class="mob-left-list" (click)="showLists();">Lists</div>
+   <div class="col-md-3 col-sm-3 left-list">      
       <sdrc-data-entry-head></sdrc-data-entry-head>
    </div>
   <div class="col-md-9 content-sec">
-      <div class="col-md-10 offset-md-1">
+      <div class="col-md-10 col-sm-10 offset-md-1">
        <h2 class="list-heading">{{allDataService.selectedSection}}</h2>
        <form *ngIf="allDataService.allformData && allDataService.selectedSection">
           <div>
@@ -22,8 +23,7 @@
                       [id]="field.key" [type]="field.type" class="form-control" [ngClass]="[field.type == 'number'? 'no-spinners': '']">
            
               <!-- Input dropdown-->
-              <div class="btn-group" style="padding-left: 3px;
-              width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
+              <div class="btn-group" style="width: 100%" dropdown *ngSwitchCase="'dropdown'">
                 <input type="text" class="dropdown-input" [id]="field.key" style="padding: 10px;" readonly
                 [placeholder]="''" name="{{field.key}}" [(ngModel)] = "field.value">
                 <button type="button" style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
