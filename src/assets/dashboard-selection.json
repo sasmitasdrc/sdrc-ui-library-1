@@ -1,0 +1,278 @@
+[
+    {
+"key": null,
+"aggRole": null,
+"type": null,
+"columnName": "user-type",
+"placeholderName": "Time Period *",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 1,
+    "value": "2018.04",
+    "order": 1,
+    "isSelected": null
+    },
+    {
+    "key": 2,
+    "value": "2018.03",
+    "order": 2,
+    "isSelected": null
+    },
+    {
+    "key": 3,
+    "value": "2018.02",
+    "order": 3,
+    "isSelected": null
+    },
+    {
+    "key": 4,
+    "value": "2018.01",
+    "order": 4,
+    "isSelected": null
+    },
+    {
+    "key": 5,
+    "value": "2017.12",
+    "order": 5,
+    "isSelected": null
+    },
+    {
+    "key": 6,
+    "value": "2017.11",
+    "order": 6,
+    "isSelected": null
+    },
+    {
+    "key": 7,
+    "value": "2017.10",
+    "order": 7,
+    "isSelected": null
+    },
+    {
+    "key": 8,
+    "value": "2017.09",
+    "order": 8,
+    "isSelected": null
+    },
+    {
+    "key": 9,
+    "value": "2017.08",
+    "order": 9,
+    "isSelected": null
+    },
+    {
+    "key": 10,
+    "value": "2017.07",
+    "order": 10,
+    "isSelected": null
+    },
+    {
+    "key": 11,
+    "value": "2017.06",
+    "order": 11,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"aggRole": null,
+"type": null,
+"columnName": "report-name",
+"placeholderName": "Indicators *",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 27,
+    "value": "Status of Panchayat Level Child Protection Committee",
+    "order": 27,
+    "isSelected": null
+    },
+    {
+    "key": 28,
+    "value": "Status of Word Level Child Protection Committee",
+    "order": 28,
+    "isSelected": null
+    },
+    {
+    "key": 29,
+    "value": "Status of Block Level Child Protection Committee",
+    "order": 29,
+    "isSelected": null
+    },
+    {
+    "key": 30,
+    "value": "Children with JJB on the first day of the reporting month",
+    "order": 30,
+    "isSelected": null
+    },
+    {
+    "key": 31,
+    "value": "New children with JJB during the month",
+    "order": 31,
+    "isSelected": null
+    },
+    {
+    "key": 32,
+    "value": "Children with JJB in the reporting month",
+    "order": 32,
+    "isSelected": null
+    },
+    {
+    "key": 33,
+    "value": "Compliance relating to SIR",
+    "order": 33,
+    "isSelected": null
+    },
+    {
+    "key": 34,
+    "value": "Compliance relating to SBR and Final forms",
+    "order": 34,
+    "isSelected": null
+    },
+    {
+    "key": 35,
+    "value": "Bail ordered by JJB for old cases",
+    "order": 35,
+    "isSelected": null
+    },
+    {
+    "key": 36,
+    "value": "Children on the first day of the month - by duration",
+    "order": 36,
+    "isSelected": null
+    },
+    {
+    "key": 37,
+    "value": "Availing services only during the day",
+    "order": 37,
+    "isSelected": null
+    },
+    {
+    "key": 38,
+    "value": "Availing services during both day and night",
+    "order": 38,
+    "isSelected": null
+    }
+    ]
+},
+{
+"key": null,
+"aggRole": null,
+"type": null,
+"columnName": "report-type",
+"placeholderName": "Districts *",
+"dependecy": null,
+"dependentColumn": null,
+"dependentCondition": null,
+"frequency": null,
+"roleId": null,
+"typeId": null,
+"controlType": "dropdown",
+"value": null,
+"fileValue": null,
+"isOthersSelected": null,
+"othersValue": null,
+"options": [
+    {
+    "key": 12,
+    "value": "Balod",
+    "order": 12,
+    "isSelected": null
+    },
+    {
+    "key": 13,
+    "value": "Baloda Bazar",
+    "order": 13,
+    "isSelected": null
+    },
+    {
+    "key": 14,
+    "value": "Bilaspur",
+    "order": 14,
+    "isSelected": null
+    },
+    {
+    "key": 15,
+    "value": "Gariaband",
+    "order": 15,
+    "isSelected": null
+    },
+    {
+    "key": 16,
+    "value": "Korba",
+    "order": 16,
+    "isSelected": null
+    },
+    {
+    "key": 17,
+    "value": "Rajnandgaon",
+    "order": 17,
+    "isSelected": null
+    },
+    {
+    "key": 18,
+    "value": "Sukma",
+    "order": 18,
+    "isSelected": null
+    },
+    {
+    "key": 19,
+    "value": "Surajpur",
+    "order": 19,
+    "isSelected": null
+    },
+    {
+    "key": 20,
+    "value": "Surguja",
+    "order": 20,
+    "isSelected": null
+    },
+    {
+    "key": 21,
+    "value": "Raipur",
+    "order": 21,
+    "isSelected": null
+    },
+    {
+    "key": 22,
+    "value": "Mahasamund",
+    "order": 22,
+    "isSelected": null
+    },
+    {
+    "key": 23,
+    "value": "Janjgir-Champa",
+    "order": 23,
+    "isSelected": null
+    },
+    {
+    "key": 24,
+    "value": "Janjgir-Champa",
+    "order": 24,
+    "isSelected": null
+    }
+    ]
+}
+]

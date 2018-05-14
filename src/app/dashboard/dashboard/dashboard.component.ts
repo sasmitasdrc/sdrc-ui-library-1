@@ -14,14 +14,20 @@ import { DonutChartModel } from '../models/donut-chart.model';
 })
 export class DashboardComponent implements OnInit {
 
+  selectionInputs: any;
   spiderData: SpiderChartModel;
   mapData: GoogleMapModel[];
   lineChartData:LineChartModel[];
   barChartData: BarchartModel[];
   donutChartData: DonutChartModel
+  thematicData: any;
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
+
+    this.dashboardService.getSelectionInputs().subscribe(response => {
+      this.selectionInputs = response;
+    })
     this.dashboardService.getSpiderChart().subscribe(data=>{
       this.spiderData =  <SpiderChartModel>data;
     })
@@ -42,6 +48,15 @@ export class DashboardComponent implements OnInit {
       this.donutChartData =  <DonutChartModel>data;
     })
 
+    this.dashboardService.getThematicData().subscribe(data =>{
+      this.thematicData = data;
+    })
+
+  }
+
+  selectDropdown(selectedOption, model, index){
+    this.selectionInputs[index].value = selectedOption.value;
+    this.selectionInputs[index].key = selectedOption.key;
   }
 
 }
