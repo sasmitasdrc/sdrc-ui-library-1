@@ -24,7 +24,7 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     AgmCoreModule
   ],
-  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent, DoughnutChartComponent, ThematicViewComponent],
+  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent, ThematicViewComponent, DoughnutChartComponent],
   exports: [ LineChartComponent],
   providers: [ DashboardService],
   schemas: [NO_ERRORS_SCHEMA]
