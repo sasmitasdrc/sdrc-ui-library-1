@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import * as d3 from 'd3';
 // import * as topojson from 'ts-topojson';
-import * as topojson from 'topojson-client';
+import * as topojson from 'topojson';
 
 @Component({
   selector: 'sdrc-thematic-view',

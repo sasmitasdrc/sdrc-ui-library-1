@@ -25,7 +25,7 @@ import { ThematicViewComponent } from './charts/thematic-view/thematic-view.comp
     FormsModule,
     AgmCoreModule
   ],
-  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent, ThematicViewComponent],
+  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent, ThematicViewComponent,PieChartComponent],
   exports: [ LineChartComponent],
   providers: [ DashboardService],
   schemas: [NO_ERRORS_SCHEMA]
