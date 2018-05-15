@@ -27,6 +27,6 @@ export class DashboardService {
     return this.httpClient.get<DonutChartModel>('assets/donutChartData.json');
   }
   getThematicViewData(){
-    return this.httpClient.get<DonutChartModel>('assets/thematic-map-data.json');
+    return this.httpClient.get('assets/thematic-map-data.json');
   }
 }
