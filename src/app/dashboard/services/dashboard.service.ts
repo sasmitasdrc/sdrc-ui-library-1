@@ -32,6 +32,6 @@ export class DashboardService {
   }
 
   getThematicData(){
-    return this.httpClient.get('assets/India.json')
+    return this.httpClient.get('assets/india.json')
   }
 }

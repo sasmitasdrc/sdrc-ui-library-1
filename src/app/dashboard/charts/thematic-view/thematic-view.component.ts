@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
-import * as d3 from 'd3';
-// import * as topojson from 'ts-topojson';
+import * as d3 from 'd3v4';
 import * as topojson from 'topojson';
 
 @Component({
@@ -9,45 +8,41 @@ import * as topojson from 'topojson';
   styleUrls: ['./thematic-view.component.scss']
 })
 export class ThematicViewComponent implements OnInit {
-  width: any;
+  width;
   height;
   projection;
   path;
   svg;
   g: any;
-
-  // @Input
-
-  @HostListener('window:resize') onResize() {
-
-    this.width = window.innerWidth
-    this.height = window.innerHeight;
-    this.projection = d3.geo.mercator();
-    this.path = d3.geo.path()
-      .projection(this.projection)
-      .pointRadius(2);
-    d3.selectAll('#map svg').remove();
-    this.svg = d3.select("#map").append("svg")
-      .attr("width", this.width)
-      .attr("height", this.height);
-      d3.json("assets/India.json", (error, data) => {
-        console.log(data)
-        let boundary = this.centerZoom(data);
-        let subunits = this.drawSubUnits(data);
-        this.colorSubunits(subunits);
-        this.drawSubUnitLabels(data);
-      });
-    this.g = this.svg.append("g");
-  }
-
+  mapContainerDiv;
 
   constructor() {
   }
 
+  // @HostListener('window:resize') onResize() {
+  //   this.width = window.innerWidth
+  //   this.height = window.innerHeight;
+  //   this.projection = d3.geoMercator();
+  //   this.path = d3.geoPath()
+  //     .projection(this.projection)
+  //     .pointRadius(2);
+  //   //d3.selectAll('#map svg').remove();
+  //   this.svg = d3.select("#map").append("svg")
+  //     .attr("width", this.width)
+  //     .attr("height", this.height);
+  //     d3.json("assets/india.json", (error, data) => {
+  //       console.log(data)
+  //       let boundary = this.centerZoom(data);
+  //       let subunits = this.drawSubUnits(data);
+  //       this.colorSubunits(subunits);
+  //       this.drawSubUnitLabels(data);
+  //     });
+  //   this.g = this.svg.append("g");
+  // }
+
   ngOnInit() {
-    {
-      this.width = window.innerWidth
-      this.height = window.innerHeight;
+      this.width = 800;
+      this.height = 400;
       this.projection = d3.geoMercator();
       this.path = d3.geoPath()
         .projection(this.projection)
@@ -56,17 +51,16 @@ export class ThematicViewComponent implements OnInit {
         .attr("width", this.width)
         .attr("height", this.height);
       this.g = this.svg.append("g");
-      d3.json("assets/India.json", (error, data) => {
-        console.log(data)
+          
+      d3.json("assets/india.json", (error, data) => {
         let boundary = this.centerZoom(data);
         let subunits = this.drawSubUnits(data);
         this.colorSubunits(subunits);
         this.drawSubUnitLabels(data);
+        this.drawPlaces(data);
+        this.drawOuterBoundary(data, boundary);
       });
-    }
   }
-
-
 
   centerZoom(data) {
     let o = topojson.mesh(data, data.objects.layer1, (a, b) => {
@@ -86,7 +80,6 @@ export class ThematicViewComponent implements OnInit {
       .translate(t);
 
     return o;
-
   }
 
   drawOuterBoundary(data, boundary) {
@@ -136,7 +129,6 @@ export class ThematicViewComponent implements OnInit {
       .style("stroke-width", "1px");
 
     return subunits;
-
   }
 
   drawSubUnitLabels(data) {
@@ -167,7 +159,6 @@ export class ThematicViewComponent implements OnInit {
         return c(i);
       })
       .style("opacity", ".6");
-
   }
 }
 
