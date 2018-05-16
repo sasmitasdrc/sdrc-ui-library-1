@@ -24,6 +24,7 @@ export class DataEntryHeadComponent implements OnInit{
     });    
   }
 
+  
   selectSetion(selectedSection){
     this.allDataService.selectedSection= selectedSection;     
   }
