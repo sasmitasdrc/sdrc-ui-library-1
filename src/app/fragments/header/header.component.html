@@ -18,8 +18,11 @@
           <a class="nav-link" mdbRippleRadius routerLink="about-us">About Us</a>
       </li>
       <li class="nav-item" [ngClass]="{'active': router.url=='/dashboard'}">
-        <a class="nav-link" mdbRippleRadius routerLink="dashboard">Dashboard</a>
-    </li>
+        <a class="nav-link" mdbRippleRadius routerLink="dashboard">Dashboard</a>      
+      </li>
+      <li class="nav-item" [ngClass]="{'active': router.url=='/thematic-map'}">
+        <a class="nav-link" mdbRippleRadius routerLink="thematic-map">Thematic View</a>
+      </li>
       <li class="nav-item" [ngClass]="{'active': router.url=='/data-entry'}">
         <a class="nav-link" mdbRippleRadius routerLink="data-entry">Data Entry</a>
       </li>

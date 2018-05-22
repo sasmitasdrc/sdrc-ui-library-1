@@ -1,0 +1,46 @@
+.legends ul li {
+    list-style-type: none;
+    padding: 3px 0px 3px 0px; 
+}
+.legends .legnedblock {
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+.legends .legend_key {
+    margin-left: 15px;
+}
+.legend-heading{
+    margin-left: 35px;
+}
+.firstslices {
+    fill: #f76653;
+    background-color: #f76653;
+}
+.secondslices {
+    fill: #e6db4f;
+    background-color: #e6db4f;
+}
+.thirdslices {
+    fill: #42b46e;
+    background-color: #42b46e;
+}
+.fourthslices {
+    fill: #a6a6a6;
+    background-color: #a6a6a6;
+}
+.map_popover {
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #4bbcd7;
+    color: #727272;
+    display: none;
+    font: italic 14px Georgia;
+    left: 0;
+    opacity: 0.6;
+    padding: 10px 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+}

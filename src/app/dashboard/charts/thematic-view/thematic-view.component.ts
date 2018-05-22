@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import * as d3 from 'd3v4';
 import * as topojson from 'topojson';
+import { DashboardService } from '../../services/dashboard.service';
 
 @Component({
   selector: 'sdrc-thematic-view',
@@ -15,8 +16,11 @@ export class ThematicViewComponent implements OnInit {
   svg;
   g: any;
   mapContainerDiv;
+  thematicData: any;
+  legends: any;
+  thematicDropDownList: any;
 
-  constructor() {
+  constructor(private dashboardService : DashboardService) {
   }
 
   // @HostListener('window:resize') onResize() {
@@ -55,9 +59,7 @@ export class ThematicViewComponent implements OnInit {
       d3.json("assets/india.json", (error, data) => {
         let boundary = this.centerZoom(data);
         let subunits = this.drawSubUnits(data);
-        this.colorSubunits(subunits);
-        this.drawSubUnitLabels(data);
-        this.drawPlaces(data);
+        this.colorSubunits(subunits);     
         this.drawOuterBoundary(data, boundary);
       });
   }
@@ -78,7 +80,7 @@ export class ThematicViewComponent implements OnInit {
     let p = this.projection
       .scale(s)
       .translate(t);
-
+    //console.log(o);    
     return o;
   }
 
@@ -89,33 +91,7 @@ export class ThematicViewComponent implements OnInit {
       .attr("d", this.path)
       .attr("class", "subunit-boundary")
       .attr("fill", "none")
-      .attr("stroke", "#3a403d");
-
-  }
-
-  drawPlaces(data) {
-
-    this.g.append("path")
-      .datum(topojson.feature(data, data.objects.places))
-      .attr("d", this.path)
-      .attr("class", "place");
-
-    this.g.selectAll(".place-label")
-      .data(topojson.feature(data, data.objects.places).features)
-      .enter().append("text")
-      .attr("class", "place-label")
-      .attr("transform", function (d) {
-        return "translate(" + this.projection(d.geometry.coordinates) + ")";
-      })
-      .attr("dy", ".35em")
-      .attr("x", 6)
-      .attr("text-anchor", "start")
-      .style("font-size", ".7em")
-      .style("text-shadow", "0px 0px 2px #fff")
-      .text(function (d) {
-        return d.properties.name;
-      });
-
+      .attr("stroke", "#666");
   }
 
   drawSubUnits(data) {
@@ -125,34 +101,16 @@ export class ThematicViewComponent implements OnInit {
       .enter().append("path")
       .attr("class", "subunit")
       .attr("d", this.path)
+      .on("mouseover", this.onover)            
+      .on("mouseout", this.onmouseout)
+      .on("mousemove", this.onmousemove)
       .style("stroke", "#fff")
       .style("stroke-width", "1px");
 
     return subunits;
   }
 
-  drawSubUnitLabels(data) {
-
-    this.g.selectAll(".subunit-label")
-      .data(topojson.feature(data, data.objects.layer1).features)
-      .enter().append("text")
-      .attr("class", "subunit-label")
-      .attr("transform", function (d) {
-        return "translate(" + this.path.centroid(d) + ")";
-      })
-      .attr("dy", ".35em")
-      .attr("text-anchor", "middle")
-      .style("font-size", ".5em")
-      .style("text-shadow", "0px 0px 2px #fff")
-      .style("text-transform", "uppercase")
-      .text(function (d) {
-        return d.properties.NAME1_;
-      });
-
-  }
-
   colorSubunits(subunits) {
-
     let c = d3.scaleOrdinal(d3.schemeCategory20);
     subunits
       .style("fill", function (d, i) {
@@ -160,6 +118,44 @@ export class ThematicViewComponent implements OnInit {
       })
       .style("opacity", ".6");
   }
+  onover(d){    
+      var rank,datavalue;
+      d3.select(".map_popover_content").html(
+       "<strong>Area Name:</strong> <span style='color:black'>"
+          + d.properties.NAME1_ + "</span>");
+  
+       if (d.properties.utdata && d.properties.utdata.rank) {
+              rank = d.properties.utdata.rank;
+              datavalue=d.properties.utdata.value;
+        }else{
+              rank = "Not Available";
+              datavalue = "Not Available";
+        }
+          
+      
+          d3.select(".map_popover_close").html(
+                  "<strong>Rank:</strong> <span style='color:black'>"
+                  + rank + "</span>"
+                  + "<br><strong>Value:</strong> <span style='color:black'>"
+                          + datavalue + "</span>");
+          
+          // d3.select(this.parentNode.appendChild(this))
+          //         .classed("activehover", true);
+  }
+  onmousemove(d) {
+      d3.select(".map_popover")
+        .style("display", "block")
+        .style("left", (d3.event.pageX) - 160 + "px")     
+        .style("top", (d3.event.pageY - 900) + "px")
+        .style("opacity", "1")
+        .style("visibility", "visible");
+  }
+  onmouseout() {
+    d3.select(".map_popover").style("display", "none");
+    // d3.select(this.parentNode.appendChild(this))
+    // .classed("activehover", false);
+  }
+ 
 }
 
 
