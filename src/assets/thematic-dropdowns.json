@@ -1,0 +1,70 @@
+
+[
+     
+        {
+            "key": 1,
+            "label": "Indicators",           
+            "controlType": "dropdown",
+            "type":"option",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Availability of essential commodities with ASHA/School/AWCs - Centchroman",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "Family planning",
+                "order": 2
+              },
+              {
+                "key": 2,
+                "value": "Availability of essential commodities with ASHA/School/AWCs - Mala N",
+                "order": 3
+              }              
+            ]
+        },    
+
+        {
+            "key": 1,
+            "label": "Periodicity",
+            "controlType": "dropdown",
+            "type":"option",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Monthly",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "Quaterly",
+                "order": 2
+              }, 
+              {
+                "key": 3,
+                "value": "Yearly",
+                "order": 3
+              }             
+            ]
+        },    
+    
+        {
+            "key": 1,
+            "label": "Time period",
+            "controlType": "dropdown",
+            "type":"option",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Apr 2018",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "May 2018",
+                "order": 2
+              }             
+            ]
+        }       
+]

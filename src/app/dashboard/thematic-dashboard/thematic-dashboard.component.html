@@ -1,0 +1,53 @@
+   <div class="container">
+    <div class="row">
+          <div class="col-md-12">
+              <h4 class="page-heading">Thematic Dashboard</h4>
+          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+ 
+              <div *ngFor="let field of thematicDropDownList; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}" class="row">
+                <!-- <label [attr.for]="field.key" class="col-md-4 text-right">{{field.label}}</label> -->
+                <div [ngSwitch]="field.controlType" class="col-md-10 offset-md-2 input-holder">
+                  
+                  <!-- Input dropdown-->
+                  <div class="btn-group" style="padding-left: 3px;
+                  width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
+                  <input type="text" class="dropdown-input" [id]="field.key" style="padding: 10px" readonly
+                    [placeholder]="''" [(ngModel)]="field.value" name="{{field.columnName}}" >
+                    <button type="button" style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="btn btn-default dropdown-toggle px-3 waves-light select-dropdown" 
+                     mdbRippleRadius></button>
+                    <div class="dropdown-menu drp-list">
+                        <a class="dropdown-item" style="font-size: 13px;"
+                         *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropdown(opt, thematicDropDownList, i)">{{opt.value}}</a>
+                    </div>
+                  </div>                                         
+                </div> 
+              </div>                      
+         
+      </div>
+    </div>
+    </div>
+    <div class="row">
+            <section id="legendsection" class="legends">
+                    <div class="legend-heading">
+                        <img class="img-responsive" src="assets/images/north_arrow_new.png">
+                    </div>
+                    <h4 class="legend-heading">LEGEND</h4>
+                    <ul>
+                     <li *ngFor ="let legend of legends" class="legend_list">
+                        <div class="{{legend.value}} legnedblock"> </div>    
+                        <span	class="legend_key">{{legend.keyValue}}</span>                                          
+                     </li> 
+                    </ul>
+            </section>
+            <div class="map_popover">
+                <div class="map_popover_close"></div>
+                <div class="map_popover_content"></div>
+            </div>
+        <sdrc-thematic-view></sdrc-thematic-view>
+    </div> 
+  </div>

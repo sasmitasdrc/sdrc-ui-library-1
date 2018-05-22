@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   lineChartData:LineChartModel[];
   barChartData: BarchartModel[];
   donutChartData: DonutChartModel
-  thematicData: any;
+
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
@@ -46,10 +46,6 @@ export class DashboardComponent implements OnInit {
 
     this.dashboardService.getDonutChartData().subscribe(data=>{
       this.donutChartData =  <DonutChartModel>data;
-    })
-
-    this.dashboardService.getThematicData().subscribe(data =>{
-      this.thematicData = data;
     })
 
   }

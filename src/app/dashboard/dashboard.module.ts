@@ -15,6 +15,7 @@ import { DoughnutChartComponent } from './charts/doughnut-chart/doughnut-chart.c
 
 import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ThematicDashboardComponent } from './thematic-dashboard/thematic-dashboard.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     AgmCoreModule
   ],
-  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent, ThematicViewComponent, DoughnutChartComponent],
+  declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent, ThematicViewComponent, DoughnutChartComponent, ThematicDashboardComponent],
   exports: [ LineChartComponent],
   providers: [ DashboardService],
   schemas: [NO_ERRORS_SCHEMA]

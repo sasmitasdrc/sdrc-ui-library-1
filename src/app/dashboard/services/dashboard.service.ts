@@ -4,6 +4,7 @@ import { GoogleMapModel } from '../models/google-map.model';
 import { LineChartModel } from '../models/line-chart.model';
 import { SpiderChartModel } from '../models/spider-chart.model';
 import { DonutChartModel } from '../models/donut-chart.model';
+import { ThematicModel, ThematicModelDropDown } from '../models/thematic.model'
 
 @Injectable()
 export class DashboardService {
@@ -32,6 +33,10 @@ export class DashboardService {
   }
 
   getThematicData(){
-    return this.httpClient.get('assets/india.json')
+    return this.httpClient.get<ThematicModel>('assets/thematic-map-data.json')
+  }
+
+  getThematicDropDownList(){
+    return this.httpClient.get<ThematicModelDropDown>('assets/thematic-dropdowns.json')
   }
 }
