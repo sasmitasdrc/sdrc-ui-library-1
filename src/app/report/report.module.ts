@@ -8,13 +8,15 @@ import { ReportTableComponent } from './report-table/report-table.component';
 import { ReportService } from './services/report.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   imports: [
     CommonModule,
     ReportRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgGridModule.withComponents([])
   ],
   declarations: [ReportSelectionComponent, ReportComponent, ReportTableComponent],
   providers: [ReportService],
