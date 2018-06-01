@@ -12,8 +12,8 @@ import { GridOptions } from 'ag-grid';
 export class ReportTableComponent implements OnInit {
   @ViewChild('agGrid') agGrid: AgGridNg2;
   @ViewChild('gridOptions') gridOptions: AgGridNg2;
-  private customGridOptions: GridOptions;
-  private overlayLoadingTemplate;
+  public customGridOptions: GridOptions;
+  public overlayLoadingTemplate;
   reportsService: ReportService;
   rowData: any;
   columnDefs = [
@@ -39,6 +39,10 @@ export class ReportTableComponent implements OnInit {
   }
 
   ngOnInit() {
+
+  }
+
+  getSelectedRows(){
 
   }
 
