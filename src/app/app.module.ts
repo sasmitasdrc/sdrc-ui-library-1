@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injectable } from '@angular/core';
 import { HttpClientModule, HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
-import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
-import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AgmCoreModule } from '@agm/core';
 
@@ -52,8 +51,7 @@ export class XhrInterceptor implements HttpInterceptor {
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyDMIi1qnl_K9VYeOx_c1mHttcTirQV2Jvc'
     }),
-    LoadingBarRouterModule,
-    LoadingBarHttpClientModule,
+    
     MDBBootstrapModule.forRoot()
   ],
   schemas: [NO_ERRORS_SCHEMA],
