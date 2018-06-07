@@ -60,7 +60,6 @@ export class ThematicViewComponent implements OnInit {
         let boundary = this.centerZoom(data);
         let subunits = this.drawSubUnits(data);
         this.colorSubunits(subunits);     
-        this.drawOuterBoundary(data, boundary);
       });
   }
 
