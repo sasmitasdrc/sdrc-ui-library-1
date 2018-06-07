@@ -1,6 +1,4 @@
-
-
-table.table thead th {
+/* table.table thead th {
     border-top: none;
     background: #1f4a7c;
     color: #fff;
@@ -13,4 +11,51 @@ table.table td {
 
 .margin-top-table{
     margin-top: 5%;
+} */
+
+// css pseudo piercing is necessary here else the style here wont 
+// override the theme style of ag-grid theme
+
+/* ::ng-deep .ag-theme-balham .ag-header {
+    background-color: #360e77;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
 }
+ */
+
+// or use the below one below one is the latest one
+// above ::ng-deep is about to be deprecated and may not work in future
+:host /deep/ .ag-theme-balham .ag-header .ag-header-cell  {
+    background-color: #1f497b;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    word-wrap: break-word;
+    
+   
+}
+/* :host /deep/ .ag-theme-balham .ag-header-cell-text {       
+    
+    white-space: nowrap;
+} */
+.btn-report{
+    background-color: #1f497b;
+}
+
+
+//showing only text filter and hiding the rest of the filter
+:host /deep/ .ag-filter-select{
+    display: none;
+}
+//spinner shows before data loads
+.fa-hourglass-1 {
+    color: navy;
+    font-size: 18px;
+  }
+  .fa-frown-o {
+    color: navy;
+    font-size: 18px;
+  }
+  //spinner ends

@@ -6,14 +6,14 @@ import { FormModel } from '../models/user-forms.model'
 export class UserFormControlService {
 
   constructor() { }
-  toFormGroup(userFormFields: FormModel<any>[] ) {
+  toFormGroup(userFormFields: FormModel<any>[]) {
     let group: any = {};
     console.log(userFormFields);
-    if(userFormFields)
-    userFormFields.forEach(userFields => {
-      group[userFields.key] = userFields.required ? new FormControl(userFields.value || '', Validators.required)
-                                              : new FormControl(userFields.value || '');
-    });
+    if (userFormFields)
+      userFormFields.forEach(userFields => {
+        group[userFields.key] = userFields.required ? new FormControl(userFields.value || '', Validators.required)
+          : new FormControl(userFields.value || '');
+      });
     return new FormGroup(group);
   }
 
