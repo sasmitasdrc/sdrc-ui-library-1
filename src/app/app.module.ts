@@ -18,6 +18,8 @@ import { routing } from './app.routing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Exception404Component } from './exception404/exception404.component';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 @Injectable()
 export class XhrInterceptor implements HttpInterceptor {
@@ -52,7 +54,9 @@ export class XhrInterceptor implements HttpInterceptor {
       apiKey:'AIzaSyDMIi1qnl_K9VYeOx_c1mHttcTirQV2Jvc'
     }),
     
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    LoadingBarHttpClientModule,
+    LoadingBarRouterModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
