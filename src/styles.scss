@@ -41,6 +41,7 @@ body{
 .input-holder{
     display: inline-block;
     padding-bottom: 10px;
+    padding-right: 85px;
 }
 .no-spinners [type='number'] {
     -moz-appearance:textfield;
@@ -148,4 +149,21 @@ input[type=file] {
     .left-list{
         max-width: 60%;
     }
+}
+
+.firstslices {
+    fill: #f76653;
+    background-color: #f76653;
+}
+.secondslices {
+    fill: #e6db4f;
+    background-color: #e6db4f;
+}
+.thirdslices {
+    fill: #42b46e;
+    background-color: #42b46e;
+}
+.fourthslices {
+    fill: #a6a6a6;
+    background-color: #a6a6a6;
 }

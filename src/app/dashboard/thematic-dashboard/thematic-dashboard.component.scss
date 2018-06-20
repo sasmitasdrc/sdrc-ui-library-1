@@ -8,27 +8,16 @@
     float: left;
 }
 .legends .legend_key {
-    margin-left: 15px;
+    padding-left: 15px;
 }
 .legend-heading{
-    margin-left: 35px;
+    padding-left: 38px;   
 }
-.firstslices {
-    fill: #f76653;
-    background-color: #f76653;
+.direction{
+    padding-left: 38px;
+    padding-bottom: 15px;
 }
-.secondslices {
-    fill: #e6db4f;
-    background-color: #e6db4f;
-}
-.thirdslices {
-    fill: #42b46e;
-    background-color: #42b46e;
-}
-.fourthslices {
-    fill: #a6a6a6;
-    background-color: #a6a6a6;
-}
+
 .map_popover {
     background: #f9f9f9;
     border-radius: 5px;

@@ -8,28 +8,44 @@ import { ThematicModel, ThematicModelDropDown } from '../models/thematic.model'
   styleUrls: ['./thematic-dashboard.component.scss']
 })
 export class ThematicDashboardComponent implements OnInit {
-  thematicData: ThematicModel;
+  thematicData: any;
   legends: ThematicModel;
+  mapData:any
   thematicDropDownList: any;
 
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
-    
-    this.dashboardService.getThematicData().subscribe(data =>{
-      this.thematicData = data;
-      console.log(this.thematicData);
-      this.legends = this.thematicData.legends;       
-      console.log(this.legends);          
-     })
-
-     this.dashboardService.getThematicDropDownList().subscribe(drpData =>{
-      this.thematicDropDownList = drpData;
-      console.log(this.thematicDropDownList);      
+    this.dashboardService.getThematicDropDownList().subscribe(drpData =>{
+      this.thematicDropDownList = drpData;    
     }) 
   }
   selectDropdown(selectedOption, model, index){
-    // this.selectionInputs[index].value = selectedOption.value;
-    // this.selectionInputs[index].key = selectedOption.key;
+    this.thematicDropDownList[index].value = selectedOption.value;
+    this.thematicDropDownList[index].key = selectedOption.key;
+
+    let selected=true;
+    this.thematicDropDownList.forEach(element => {
+      //console.log(element.value);
+      if(!element.value)
+      {
+        selected=false;
+        return;
+      }
+    });
+
+    if(selected)
+    {
+     this.getThematicData();
+    }
+
+  }
+  getThematicData()
+  {
+    this.dashboardService.getThematicData().subscribe(data =>{
+      this.thematicData = data;
+      this.mapData=data.dataCollection;
+      this.legends = this.thematicData.legends;              
+    })
   }
 }

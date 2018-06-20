@@ -55,7 +55,7 @@ export class XhrInterceptor implements HttpInterceptor {
     }),
     
     MDBBootstrapModule.forRoot(),
-    LoadingBarHttpClientModule,
+   // LoadingBarHttpClientModule,
     LoadingBarRouterModule
   ],
   schemas: [NO_ERRORS_SCHEMA],

@@ -13,8 +13,7 @@
                 <div [ngSwitch]="field.controlType" class="col-md-10 offset-md-2 input-holder">
                   
                   <!-- Input dropdown-->
-                  <div class="btn-group" style="padding-left: 3px;
-                  width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
+                  <div class="btn-group" style="width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
                   <input type="text" class="dropdown-input" [id]="field.key" style="padding: 10px" readonly
                     [placeholder]="''" [(ngModel)]="field.value" name="{{field.columnName}}" >
                     <button type="button" style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -27,13 +26,25 @@
                   </div>                                         
                 </div> 
               </div>                      
-         
       </div>
     </div>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="thematicData">
+      <div class="col-md-12">           
+        
+          <div class="col-md-3" style="padding-top: 300px; padding-left: 25px; float: left; font-size:12px;">
+            <ul>
+              <li style="list-style:none;"><strong>Higest</strong>: <span style="color: #42b46e; font-weight: bold;">Chhattisgarh - 81.1</span></li>
+              <li style="list-style:none;"><strong>Lowest</strong>: <span style="color: #f76653; font-weight: bold;">Telangana - 30.0</span></li>
+            </ul>
+          </div>
+        <div class="col-md-5" style="position: absolute; padding-left: 50px;">
+         <sdrc-thematic-view *ngIf="thematicData" [mapData]="mapData"></sdrc-thematic-view>
+        </div>
+       
+        <div class="col-md-4" style="float: right; padding-top: 150px;">        
             <section id="legendsection" class="legends">
-                    <div class="legend-heading">
+                    <div class="direction">
                         <img class="img-responsive" src="assets/images/north_arrow_new.png">
                     </div>
                     <h4 class="legend-heading">LEGEND</h4>
@@ -44,10 +55,7 @@
                      </li> 
                     </ul>
             </section>
-            <div class="map_popover">
-                <div class="map_popover_close"></div>
-                <div class="map_popover_content"></div>
-            </div>
-        <sdrc-thematic-view></sdrc-thematic-view>
-    </div> 
+        </div>
+    </div>
   </div>
+</div>

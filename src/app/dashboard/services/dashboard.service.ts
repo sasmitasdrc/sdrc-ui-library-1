@@ -33,7 +33,7 @@ export class DashboardService {
   }
 
   getThematicData(){
-    return this.httpClient.get<ThematicModel>('assets/thematic-map-data.json')
+    return this.httpClient.get<any>('assets/thematic-map-data.json')
   }
 
   getThematicDropDownList(){
